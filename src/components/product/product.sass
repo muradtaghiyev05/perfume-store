@@ -49,11 +49,13 @@
                     color: rgb(0, 0, 0, 0.7)
                     border: 2px solid $red
                     border-radius: 10px
-                    font-size: 1.1rem
+                    font-size: 1rem
                     transition: .3s
                     &:hover
                         background-color: $red
                         color: white
+                    @include responsive_sm
+                        font-size: 1.1rem
                 
                 .ml-active
                     background-color: $red

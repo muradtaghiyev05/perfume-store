@@ -1,0 +1,107 @@
+.product-page
+    padding: 4rem 0
+    @include responsive_md
+        padding: 8rem 0
+
+    .product-page-container
+        @include flex(column, center, flex-start)
+        @include responsive_md
+            flex-direction: row
+            gap: 2rem
+
+        .swiper-container
+            align-self: center
+            width: 200px
+            height: 200px
+            @include flex(row, center, center)
+            @include responsive_xs
+                width: 350px
+                height: 350px
+            @include responsive_sm
+                width: 450px
+                height: 450px
+            @include responsive_md
+                align-self: flex-start
+                flex: 2
+
+        .product-detail-container
+            @include flex(column, center, flex-start)
+            padding: 1rem
+            padding-top: 0
+            @include responsive_md
+                flex: 3
+
+            h3
+                font-size: 1.4rem
+            
+            .category-span
+                color: rgb(0, 0, 0, 0.6)
+                font-size: 1rem
+            
+            .ml-container
+                margin-top: 1rem
+                @include flex(row, center, center)
+                gap: 1rem
+
+                .ml-btn
+                    padding: .2rem 1.1rem
+                    background-color: white
+                    color: rgb(0, 0, 0, 0.7)
+                    border: 2px solid $red
+                    border-radius: 10px
+                    font-size: 1.1rem
+                    transition: .3s
+                    &:hover
+                        background-color: $red
+                        color: white
+                
+                .ml-active
+                    background-color: $red
+                    color: white
+
+            .product-price
+                font-size: 2rem
+                font-weight: 500
+                padding: .8rem 0
+                @include responsive_md
+                    padding-top: 1.2rem
+                
+                .discount-price
+                    font-size: 1.2rem
+                    padding-right: .4rem
+                    text-decoration-line: line-through
+                    color: #777a81
+            
+            .amount-container
+                @include flex(row, flex-start, center)
+                gap: 1.4rem
+                padding-bottom: 1rem
+
+                .amount
+                    border-color: $darkBlue
+                    border-radius: 10px
+                    font-size: 1.2rem
+                    padding: .6rem .2rem
+                    width: 70px
+                    height: 45px
+                    text-align: center
+                    outline: none
+                    color: $black
+                    background-color: white
+                    @include responsive_md
+                        font-size: 1.4rem
+                
+                .add-to-cart-btn
+                    font-size: 1.2rem
+                    color: $white
+                    background-color: $darkBlue
+                    padding: .7rem 1.8rem
+                    white-space: nowrap
+
+            .about-product-title
+                font-weight: 600
+                font-size: 1.15rem
+                padding-top: 1rem
+            
+            .about-product-desc
+                font-size: 1.05rem

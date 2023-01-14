@@ -1,0 +1,198 @@
+.bag
+    @include flex(column, center)
+
+    .bag-title
+        padding-top: 4rem
+        text-align: center
+        margin-left: 0
+        @include responsive_md
+            margin-left: 4rem
+
+    .bag-container
+        padding: 1rem
+        padding-bottom: 4rem
+        width: 100%
+
+        .detail-span
+            font-size: 1.1rem
+            width: 100px
+            @include responsive_sm
+                width: 100%
+
+        .top-container
+            @include flex(row, space-between, center)
+            padding: 1rem 0
+            gap: 1rem
+            width: 100%
+
+            .left-btn
+                background-color: $white
+                padding: .4rem 1rem
+                font-size: 1rem
+                border: 2px solid $black
+                cursor: pointer
+                color: $black
+
+            .right-btn
+                background-color: $black
+                color: $white
+                padding: .4rem 1rem
+                font-size: 1rem
+                border: 2px solid $black
+                cursor: pointer
+            
+            .top-title
+                display: none
+                font-size: 1.2rem
+                text-decoration: underline
+                @include responsive_md
+                    display: block
+
+        .bottom-container
+            @include flex(column)
+            @include responsive_lg
+                @include flex(row)
+                gap: 2rem
+            
+            .info-container
+                flex: 2
+
+                .product-container
+                    margin: 1rem 0
+                    @include flex(column)
+                    @include responsive_md
+                        @include flex(row, space-between, flex-end)
+
+                    .detail-container
+                        @include flex(row)
+
+                        .img-container
+                            width: 200px
+                            height: 200px
+                            @include responsive_md
+                                width: 250px
+                                height: 250px
+
+                        .details
+                            @include flex(column, flex-start, flex-start)
+                            gap: 1rem
+                            margin-top: 1rem
+                            margin-left: 1rem
+
+                            .detail-span
+                                font-size: 1rem
+                                @include responsive_md
+                                    font-size: 1.2rem
+                                
+                                .ml-span
+                                    font-size: .9rem
+                                    padding: .3rem
+                                    color: $lightBlack
+
+                            .remove-product-btn
+                                font-size: .8rem
+                                color: $white
+                                background-color: $darkBlue
+                                padding: .5rem
+                                word-wrap: break-word
+                                @include responsive_md
+                                    font-size: 1rem
+                                    white-space: nowrap
+                                    margin-top: auto
+                                    margin-bottom: .6rem
+                                    padding: .5rem 1.2rem
+
+                    .price-container
+                        @include flex(row, space-between, center)
+                        padding: .5rem 1rem
+                        @include responsive_md
+                            gap: 1rem
+                            @include flex(column, center, flex-end)
+
+
+                        #subtotal
+                            font-size: 1.3rem
+                            @include responsive_md
+                                font-size: 1.5rem
+
+                        .amount-container
+                            @include flex(row, center, center)
+                            gap: 1rem
+
+                            .amount
+                                font-size: 1.5rem
+                                @include responsive_md
+                                    font-size: 2rem
+
+                            .sm-btn
+                                background: none
+                                cursor: pointer
+                                font-size: 2.5rem
+                                color: $black
+                                @include flex(row, center, center)
+                                height: 30px
+                                width: 30px
+                                transition: .4s
+                                @include responsive_md
+                                    font-size: 3rem
+                                &:hover
+                                    transform: scale(1.1)
+                                    
+                        
+            .summary-container
+                flex: 1
+                margin: 1rem 0
+                padding: 3rem 1rem
+                border-radius: 10px
+                border: 2px solid $white
+                background-color: $white
+                @include flex(column)
+                height: 100%
+
+                .summary-title
+                    align-self: center
+                    font-size: 1.8rem
+                    font-weight: 500
+                
+                .summary-item
+                    padding: 1.4rem 0
+                    @include flex(row, space-between, center)
+                    font-size: 1.1rem
+
+                    .total
+                        font-size: 1.4rem
+                        font-weight: 500
+
+                .summary-btn
+                    background-color: $black
+                    color: $white
+                    padding: .4rem 1rem
+                    font-size: 1.2rem
+                    border: 2px solid $black
+                    cursor: pointer
+
+.continue-btn
+    color: $black
+
+.empty-bag-container
+    @include flex(column, center, center)
+    gap: 2rem
+    margin: 4rem 0
+    padding: 0 2rem
+
+    .empty-bag
+        @include flex(row, center, center)
+        gap: .6rem
+
+        .empty-title
+            font-size: 1.7rem
+
+        .empty-img
+            width: 120px
+
+    .continue-btn
+        background-color: $white
+        padding: .4rem 1rem
+        font-size: 1.2rem
+        border: 2px solid $black
+        cursor: pointer

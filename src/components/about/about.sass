@@ -1,0 +1,45 @@
+.about-container
+    @include flex(column, center, center)
+    padding: 4rem 0
+
+    .about-title
+        text-align: center
+        margin-bottom: 2rem
+    
+    .about-detail-container
+        padding: 3rem 2rem
+        @include flex(column)
+        gap: 1rem
+        border-radius: 10px
+        border: 1px solid $white
+        box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75)
+
+        p
+            font-size: 1.1rem
+            line-height: 1.7
+
+        #text2
+            margin-bottom: 2rem
+
+        .about-social-container
+            background-color: rgba(34, 51, 59, 0.9)
+            border-radius: 5px
+            padding: 1rem
+            width: 90%
+            display: grid
+            grid-template-columns: repeat(2, 80px)
+            justify-content: space-around
+            align-items: center
+            row-gap: 1rem
+            max-width: 600px
+            margin: 0 auto
+            @include responsive_sm
+                grid-template-columns: repeat(4, 1fr)
+
+            a
+                width: 40px
+                margin: 0 auto
+                transition: .3s
+                &:hover
+                    transform: scale(1.1)
+                

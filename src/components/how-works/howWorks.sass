@@ -1,0 +1,41 @@
+.how-works-container
+    @include flex(column, center, center)
+    padding: 4rem 0
+
+    .how-works-title
+        text-align: center
+        margin-bottom: 2rem
+    
+    .how-works-detail-container
+        padding: 3rem 2rem
+        display: grid
+        grid-template-columns: 1fr
+        gap: 1rem
+        @include responsive_md
+            grid-template-columns: repeat(2, 1fr)
+
+        .detail-step
+            @include flex(column, space-between, center)
+            border-radius: 10px
+            border: 1px solid $white
+            box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75)
+            padding: 2rem .6rem
+            margin: 0 auto
+            @include responsive_md
+                padding: 2rem
+
+            span
+                font-size: 1.6rem
+                font-weight: 500
+                text-align: center
+                padding: .4rem 0 1rem
+            
+            p
+                margin: auto 0
+                text-align: center
+                font-size: 1.1rem
+                min-height: 150px
+
+            img
+                width: 200px
+                height: 200px

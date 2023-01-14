@@ -1,0 +1,20 @@
+.category-filter
+    @include flex(row, center, center)
+    gap: 0.75rem
+    margin: 2rem
+
+    .category-item
+        cursor: pointer
+        color: black
+        padding: 0.25rem 0.75rem
+        font-weight: 500
+        border-radius: 0.5rem
+        text-transform: capitalize
+        transition: .3s
+        &:hover
+            background-color: $red
+            color: white
+    
+    .active-category
+        background-color: $red
+        color: white

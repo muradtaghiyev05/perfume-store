@@ -1,0 +1,75 @@
+.home
+    @include flex(column, center, center)
+
+    .hero-container
+        width: 100%
+        height: 80vh
+        position: relative
+
+        img
+            object-fit: cover
+            object-position: 35% 65%
+            @include responsive_md
+                object-position: 50% 50%            
+
+        .hero-title
+            @include flex(column, center, flex-start)
+            flex-direction: column
+            position: absolute
+            top: 25%
+            left: 40%
+            @include responsive_md
+                top: 30%
+                left: 40%
+            @include responsive_lg
+                left: 40%
+
+            .top
+                font-size: 1rem
+                font-weight: 600
+                color: $lightBlack
+                @include responsive_sm
+                    font-size: 1.1rem
+                @include responsive_lg
+                    font-size: 1.2rem
+
+            .mid
+                font-size: 2.1rem
+                font-weight: 600
+                line-height: 1.4
+                color: $black
+                @include responsive_sm
+                    font-size: 3rem
+                @include responsive_lg
+                    font-size: 3.4rem
+
+            .bottom
+                margin-top: .8rem
+                font-size: .9rem
+                font-weight: 500
+                color: $lightBlack
+                @include responsive_sm
+                    font-size: 1.1rem
+                    width: 80%
+                @include responsive_lg
+                    font-size: 1.2rem
+    
+    .new-products-container
+        @include flex(column, center, center)
+        padding-bottom: 6rem 
+        
+        h1
+            padding-bottom: 3rem
+            text-align: center
+
+        .all-link
+            padding: 1rem 0
+            font-size: 1.1rem
+            text-align: center
+            text-decoration: underline
+            text-underline-offset: .4em
+            transition: .3s
+            &:hover
+                transform: scale(1.05)
+                color: $red
+

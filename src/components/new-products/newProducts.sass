@@ -1,0 +1,16 @@
+.new-products
+    padding: 2rem .4rem
+    gap: .5rem
+    display: grid
+    justify-content: center
+    grid-template-columns: repeat(1, 1fr)
+    @include responsive_xs
+        grid-template-columns: repeat(2, 1fr)
+    @include responsive_md
+        gap: 2rem
+        padding: 2rem
+    @include responsive_lg
+        grid-template-columns: repeat(3, 1fr)
+    @include responsive_xl
+        grid-template-columns: repeat(4, 1fr)
+    

@@ -25,6 +25,11 @@ const Product = () => {
       }));
   };
 
+  const handleSelection = (selection) => {
+    setCurrentSelection(selection);
+    setItemQuantity(1);
+  };
+
   useEffect(() => {
     const changePage = () => {
       window.scrollTo({ top: 0 });
@@ -55,7 +60,7 @@ const Product = () => {
                   value={currentSelection} 
                   key={index} 
                   className={currentSelection === index ? "ml-btn ml-active" : "ml-btn"}
-                  onClick={() => setCurrentSelection(index)}>{item.ml} ml</button>
+                  onClick={() => handleSelection(index)}>{item.ml} ml</button>
               ))}
             </div>
             <span className='product-price'>

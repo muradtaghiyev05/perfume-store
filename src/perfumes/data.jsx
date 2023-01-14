@@ -99,18 +99,15 @@ import viktor4 from './images/women/viktor4.webp'
 const perfumesArr = [
     {
         id: 1,
-        selected: -1,
         title: "Lancôme La Vie Est Belle",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 105,
                 discount: 15
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 85,
                 discount: 0
@@ -121,18 +118,15 @@ const perfumesArr = [
     },
     {
         id: 2,
-        selected: -1,
         title: "Bleu De Chanel",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 200,
                 discount: 8
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 140,
                 discount: 0
@@ -143,18 +137,15 @@ const perfumesArr = [
     },
     {
         id: 3,
-        selected: -1,
         title: "Ralph Lauren",
         category: "kişi",   
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 110,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 90,
                 discount: 0
@@ -165,24 +156,20 @@ const perfumesArr = [
     },
     {
         id: 4,
-        selected: -1,
         title: "Le Labo Another 13",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 210,
                 discount: 21
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 200,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 185,
                 discount: 0
@@ -193,12 +180,10 @@ const perfumesArr = [
     },
     {
         id: 5,
-        selected: -1,
         title: "Byredo Bibliothèque",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 165,
                 discount: 0
@@ -209,24 +194,20 @@ const perfumesArr = [
     },
     {
         id: 6,
-        selected: -1,
         title: "Chanel N°5",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 150,
                 discount: 21
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 135,
                 discount: 15
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 115,
                 discount: 0
@@ -237,24 +218,20 @@ const perfumesArr = [
     },
     {
         id: 7,
-        selected: -1,
         title: "The Nue Co. Functional Fragrance",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 135,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 110,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 90,
                 discount: 0
@@ -265,18 +242,15 @@ const perfumesArr = [
     },
     {
         id: 8,
-        selected: -1,
         title: "Viktor & Rolf Flowerbomb",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 96,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 78,
                 discount: 3
@@ -287,24 +261,20 @@ const perfumesArr = [
     },
     {
         id: 9,
-        selected: -1,
         title: "Hermes H24",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 167,
                 discount: 12
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 150,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 125,
                 discount: 3
@@ -315,18 +285,15 @@ const perfumesArr = [
     },
     {
         id: 10,
-        selected: -1,
         title: "Giorgio Armani Acqua di Gio",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 75,
                 price: 102,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 91,
                 discount: 4
@@ -337,24 +304,20 @@ const perfumesArr = [
     },
     {
         id: 11,
-        selected: -1,
         title: "Commodity Book",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 30,
                 discount: 5
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 20,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 10,
                 discount: 0
@@ -365,24 +328,20 @@ const perfumesArr = [
     },
     {
         id: 12,
-        selected: -1,
         title: "Carolina Herrera Bad Boy",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 110,
                 discount: 10
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 80,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 55,
                 discount: 5
@@ -393,18 +352,15 @@ const perfumesArr = [
     },
     {
         id: 13,
-        selected: -1,
         title: "Tom Ford",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 75,
                 price: 200,
                 discount: 7
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 185,
                 discount: 0
@@ -415,24 +371,20 @@ const perfumesArr = [
     },
     {
         id: 14,
-        selected: -1,
         title: "Tom Ford Black Orchid Gold",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 217,
                 discount: 28
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 167,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 130,
                 discount: 5
@@ -443,12 +395,10 @@ const perfumesArr = [
     },
     {
         id: 15,
-        selected: -1,
         title: "Dior Sauvage",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 130,
                 discount: 0
@@ -459,18 +409,15 @@ const perfumesArr = [
     },
     {
         id: 16,
-        selected: -1,
         title: "Chanel Coco Mademoiselle",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 75,
                 price: 78,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 42,
                 discount: 0
@@ -481,24 +428,20 @@ const perfumesArr = [
     },
     {
         id: 17,
-        selected: -1,
         title: "Yves Saint Laurent Black Opium",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 95,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 75,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 35,
                 discount: 0
@@ -509,24 +452,20 @@ const perfumesArr = [
     },
     {
         id: 18,
-        selected: -1,
         title: "Gucci Bloom",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 85,
                 discount: 12
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 46,
                 discount: 9
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 29,
                 discount: 0
@@ -537,18 +476,15 @@ const perfumesArr = [
     },
     {
         id: 19,
-        selected: -1,
         title: "Marc Jacobs Daisy",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 200,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 162,
                 discount: 0
@@ -559,24 +495,20 @@ const perfumesArr = [
     },
     {
         id: 20,
-        selected: -1,
         title: "Aesop Marrakech Intense",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 210,
                 discount: 30
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 180,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 160,
                 discount: 10
@@ -587,18 +519,15 @@ const perfumesArr = [
     },
     {
         id: 21,
-        selected: -1,
         title: "Hugo Boss",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 110,
                 discount: 17
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 60,
                 discount: 0
@@ -609,24 +538,20 @@ const perfumesArr = [
     },
     {
         id: 22,
-        selected: -1,
         title: "Dior J’adore",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 110,
                 discount: 11
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 89,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 79,
                 discount: 0
@@ -637,24 +562,20 @@ const perfumesArr = [
     },
     {
         id: 23,
-        selected: -1,
         title: "Carolina Herrera Good Girl",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 176,
                 discount: 19
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 156,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 136,
                 discount: 12
@@ -665,24 +586,20 @@ const perfumesArr = [
     },
     {
         id: 24,
-        selected: -1,
         title: "Jimmy Choo Signature",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 149,
                 discount: 11
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 100,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 85,
                 discount: 0
@@ -693,24 +610,20 @@ const perfumesArr = [
     },
     {
         id: 25,
-        selected: -1,
         title: "Escentric Molecule 01",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 159,
                 discount: 11
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 139,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 129,
                 discount: 10
@@ -721,24 +634,20 @@ const perfumesArr = [
     },
     {
         id: 26,
-        selected: -1,
         title: "Vera Wang Princess",
         category: "qadın",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 39,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 24,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 19,
                 discount: 0
@@ -749,12 +658,10 @@ const perfumesArr = [
     },
     {
         id: 27,
-        selected: -1,
         title: "Gucci Guilty Pour Homme",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 60,
                 discount: 0
@@ -765,18 +672,15 @@ const perfumesArr = [
     },
     {
         id: 28,
-        selected: -1,
         title: "Odin 10 Roam",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 100,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 80,
                 discount: 8
@@ -787,18 +691,15 @@ const perfumesArr = [
     },
     {
         id: 29,
-        selected: -1,
         title: "Versace Eros",
         category: "kişi",
         prices: [
             {
-                quantity: 0,
                 ml: 75,
                 price: 85,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 56,
                 discount: 0
@@ -809,24 +710,20 @@ const perfumesArr = [
     },
     {
         id: 30,
-        selected: -1,
         title: "Yves Saint Laurent Tuxedo",
         category: "unisex",
         prices: [
             {
-                quantity: 0,
                 ml: 100,
                 price: 80,
                 discount: 0
             },
             {
-                quantity: 0,
                 ml: 75,
                 price: 60,
                 discount: 5
             },
             {
-                quantity: 0,
                 ml: 50,
                 price: 50,
                 discount: 0

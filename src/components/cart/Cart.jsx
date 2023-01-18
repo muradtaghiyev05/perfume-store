@@ -102,11 +102,14 @@ const Cart = () => {
                       </div>
                     </Link>
                     <div className='details'>
-                      <span className='detail-span'>
-                        <b>Məhsul:</b> {product.title} 
-                        <span className='ml-span'>({product.ml} ml)</span>
-                      </span>
-                      <span className='detail-span'><b>Qiyməti:</b> {product.price} AZN</span>
+                      <div className='detail-div'>
+                        <span className='what-span'>Məhsul: </span><br id='span-space' />
+                        <span className='title-span'>{product.title}</span>
+                      </div>
+                      <div className='detail-div'>
+                        <div className='what-div'>Miqdar: {product.ml}</div>
+                        <div className='what-div'>Qiymət: {product.price} AZN</div>
+                      </div>
                       <button className='remove-product-btn' onClick={() => handleRemove(product)}>Səbətdən Sil</button>
                     </div>
                   </div>
@@ -116,11 +119,9 @@ const Cart = () => {
                       <span className='amount'>{product.quantity}</span>
                       <button className='sm-btn' onClick={() => addItem(product)}>+</button>
                     </div>
-                    <div className='total-price'>
-                      <span className='detail-span' id='subtotal'>
-                        <b>Ümumi:</b> {product.price * product.quantity} AZN
-                      </span>
-                    </div>
+                    <span className='subtotal-span'>
+                      <b>Ümumi:</b> {product.price * product.quantity} AZN
+                    </span>
                   </div>
                 </div>
               ))}

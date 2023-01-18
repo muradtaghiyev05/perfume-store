@@ -38,9 +38,17 @@
                 padding: .5rem 1.1rem
 
             .card-title
+                overflow: hidden
+                text-overflow: ellipsis
+                max-width: 130px
+                display: inline-block
+                font-weight: 500
                 align-self: flex-start
                 font-size: .8rem
+                @include responsive_sm
+                    width: auto
                 @include responsive_md
+                    max-width: 230px
                     font-size: 1.1rem
 
             .category-span

@@ -76,18 +76,43 @@
                         .details
                             @include flex(column, flex-start, flex-start)
                             gap: 1rem
-                            margin-top: 1rem
                             margin-left: 1rem
 
-                            .detail-span
+                            .detail-div
                                 font-size: 1rem
                                 @include responsive_md
                                     font-size: 1.2rem
-                                
-                                .ml-span
+
+                                #span-space
+                                    @include responsive_md
+                                        display: none
+
+                                .title-span
+                                    overflow: hidden
+                                    text-overflow: ellipsis
+                                    max-width: 150px
+                                    display: inline-block
+                                    font-size: .8rem
+                                    @include responsive_xs
+                                        font-size: .9rem
+                                    @include responsive_sm
+                                        font-size: 1.2rem
+                                        width: auto
+                                        display: initial
+
+                                .what-div
+                                    font-weight: 500
+                                    font-size: .8rem
+                                    @include responsive_xs
+                                        font-size: 1rem
+                                    @include responsive_md
+                                        font-size: 1.2rem
+
+                                .what-span
+                                    font-weight: 500
+
+                                .size-div
                                     font-size: .9rem
-                                    padding: .3rem
-                                    color: $lightBlack
 
                             .remove-product-btn
                                 font-size: .8rem
@@ -95,12 +120,13 @@
                                 background-color: $darkBlue
                                 padding: .5rem
                                 word-wrap: break-word
+                                margin-top: auto
                                 @include responsive_md
                                     font-size: 1rem
                                     white-space: nowrap
-                                    margin-top: auto
                                     margin-bottom: .6rem
                                     padding: .5rem 1.2rem
+
 
                     .price-container
                         @include flex(row, space-between, center)
@@ -110,8 +136,9 @@
                             @include flex(column, center, flex-end)
 
 
-                        #subtotal
-                            font-size: 1.3rem
+                        .subtotal-span
+                            font-size: 1.1rem
+                            white-space: nowrap
                             @include responsive_md
                                 font-size: 1.5rem
 

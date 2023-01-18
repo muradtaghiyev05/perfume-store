@@ -17,7 +17,6 @@ const Product = () => {
       dispatch(addProduct({
         id: `${item.id}_${currentSelection}`,
         product: item,
-        selected: currentSelection,
         quantity: itemQuantity,
         ml: item.prices[currentSelection].ml,
         price: item.prices[currentSelection].price,

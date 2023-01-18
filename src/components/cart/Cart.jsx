@@ -65,7 +65,7 @@ const Cart = () => {
     
     window.open(`https://wa.me/994553600600?text=${productsText}`);
   };
-  console.log(cart);
+  
   return (
     <div className='bag'>
       <h1 className='bag-title'>Alış-Veriş Səbətiniz</h1>

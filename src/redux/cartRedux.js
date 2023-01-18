@@ -29,7 +29,6 @@ const cartSlice = createSlice({
                 state.products.push({ 
                     ...newProduct,
                     id: action.payload.id,
-                    selected: action.payload.selected,
                     ml: action.payload.ml,
                     price: action.payload.price,
                     quantity: action.payload.quantity

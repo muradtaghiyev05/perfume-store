@@ -15,7 +15,6 @@ const ProductCard = ({ item }) => {
         dispatch(addProduct({
             id: `${item.id}_0`,
             product: item,
-            selected: 0,
             quantity: 1,
             ml: item.prices[0].ml,
             price: item.prices[0].price, 

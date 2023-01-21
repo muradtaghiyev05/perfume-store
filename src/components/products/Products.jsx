@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Toaster } from "react-hot-toast";
+import { useSearchParams } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import ProductCard from '../product-card/ProductCard';
@@ -7,6 +8,7 @@ import CategoryFilter from '../filters/category-filter/CategoryFilter';
 import SearchFilter from '../filters/search-filter/SearchFilter';
 import SortFilter from '../filters/sort-filter/SortFilter';
 import { motion } from "framer-motion"
+import { perfumes } from '../../perfumes/data';
 
 const productsPerPage = 8;
 const sortTypes = {
@@ -22,26 +24,29 @@ const sortTypes = {
 };
 
 const Products = () => {
-    
+
+    const [searchParams, setSearchParams] = useSearchParams();
+
     // category variable
+    const searchCategory = searchParams.get('category') || 'bütün';
     const [filteredPerfumes, setFilteredPerfumes] = useState([]);
 
     // search variables
-    const [searchText, setSearchText] = useState('');
+    const searchText = searchParams.get('title') || '';
     const searchResults = [...filteredPerfumes].filter((product) => product.title.toLowerCase().includes(searchText.trim().toLowerCase()));
 
     // pagination variables
-    const [pageNumber, setPageNumber] = useState(0);
+    const pageNumber = parseInt(searchParams.get('page')) || 0;
     const pagesVisited = pageNumber * productsPerPage;
     const pageCount = Math.ceil(searchResults.length / productsPerPage);
 
     // sorting variables
-    const [currentSort, setCurrentSort] = useState('default');
+    const currentSort = searchParams.get('sorting') || 'default';
 
     // changing page
     const changePage = ({ selected }) => {
         document.getElementById("products").scrollIntoView();
-        setPageNumber(selected);
+        setSearchParams({ ...Object.fromEntries([...searchParams]), page: selected })
     };
 
     // scroll to top when changing
@@ -52,12 +57,24 @@ const Products = () => {
         changePage()
     }, []);
 
+    useEffect(() => {
+        if (searchCategory === 'bütün') {
+            setFilteredPerfumes(perfumes);
+        }
+        else {
+            const newPerfumes = perfumes.filter((perfume) => {
+                return perfume.category === searchCategory;
+            });
+            setFilteredPerfumes(newPerfumes);
+        }
+    }, [searchCategory]);
+
     return (
     <div className='products-page'>
         <h1 className='products-page-title' id='products'>Keyfiyyətli Ətirlərimiz</h1>
-        <SearchFilter searchText={searchText} setSearchText={setSearchText} setPageNumber={setPageNumber} />
-        <SortFilter currentSort={currentSort} setCurrentSort={setCurrentSort} setPageNumber={setPageNumber} />
-        <CategoryFilter setFilteredPerfumes={setFilteredPerfumes} setPageNumber={setPageNumber} />
+        <SearchFilter searchText={searchText} searchParams={searchParams} setSearchParams={setSearchParams} />
+        <SortFilter currentSort={currentSort} searchParams={searchParams} setSearchParams={setSearchParams} />
+        <CategoryFilter searchCategory={searchCategory} searchParams={searchParams} setSearchParams={setSearchParams} />
         {searchResults.length ? (
             <motion.div layout className='products-container'>
                 <Toaster

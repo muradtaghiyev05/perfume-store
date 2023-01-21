@@ -1,51 +1,39 @@
-import { useEffect, useState } from "react";
-import { perfumes } from "../../../perfumes/data";
-
 const categoryNav = [
     {
+        id: 1,
         name: 'bütün'
     },
     {
+        id: 2,
         name: 'kişi'
     },
     {
+        id: 3,
         name: 'qadın'
     },
     {
+        id: 4,
         name: 'unisex'
     }
 ];
 
-const CategoryFilter = ({ setFilteredPerfumes, setPageNumber }) => {
+const CategoryFilter = ({ searchCategory, searchParams, setSearchParams }) => {
 
-    const [head, setHead] = useState('bütün');
-    const [active, setActive] = useState(0);
-    
-    const handleCategory = (e, index) => {
-        setHead(e.target.textContent);
-        setActive(index);
+    const handleCategory = (e) => {
+        setSearchParams({
+            ...Object.fromEntries([...searchParams]),
+            category: e.target.textContent,
+            page: 0
+        });
     };
-
-    useEffect(() => {
-        if (head === 'bütün') {
-            setFilteredPerfumes(perfumes);
-        }
-        else {
-            const newPerfumes = perfumes.filter((perfume) => {
-                return perfume.category === head;
-            });
-            setFilteredPerfumes(newPerfumes);
-        }
-        setPageNumber(0);
-    }, [head]);
 
     return (
     <div className="category-filter">
-        {categoryNav.map((item, index) => (
+        {categoryNav.map((item) => (
             <span 
-                onClick={(e) => handleCategory(e, index)} 
-                key={index}
-                className={`${active === index ? 'active-category category-item' : 'category-item'}`}
+                onClick={(e) => handleCategory(e)} 
+                key={item.id}
+                className={`${item.name === searchCategory ? 'active-category category-item' : 'category-item'}`}
             >
                 {item.name}
             </span>

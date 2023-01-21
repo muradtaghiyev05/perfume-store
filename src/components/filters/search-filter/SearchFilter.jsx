@@ -1,20 +1,23 @@
-import { useEffect } from "react";
 
-const SearchFilter = ({ searchText, setSearchText, setPageNumber }) => {
+const SearchFilter = ({ searchText, searchParams, setSearchParams }) => {
 
-  useEffect(() => {
-    setPageNumber(0);
-  }, [searchText])
+  const handleSearch = (e) => {
+    setSearchParams({
+      ...Object.fromEntries([...searchParams]),
+      title: e.target.value,
+      page: 0
+    })
+  };
 
   return (
     <div className='search-container'>
-        <input
-            type='text'
-            placeholder='İstədiyiniz modeli axtarın...'
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            className='search-input'
-        />
+      <input
+        type='text'
+        placeholder='İstədiyiniz modeli axtarın...'
+        value={searchText}
+        onChange={(e) => handleSearch(e)}
+        className='search-input'
+      />
     </div>
   )
 }

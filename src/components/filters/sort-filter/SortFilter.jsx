@@ -1,20 +1,23 @@
-import { useEffect } from "react"
 
-const SortFilter = ({ currentSort, setCurrentSort, setPageNumber }) => {
+const SortFilter = ({ currentSort, searchParams, setSearchParams }) => {
 
-  useEffect(() => {
-    setPageNumber(0);
-  }, [currentSort])
+  const handleSorting = (e) => {
+    setSearchParams({
+      ...Object.fromEntries([...searchParams]),
+      sorting: e.target.value,
+      page: 0
+    });
+  };
 
   return (
-      <div className='sort-container'>
-        <span>Filter:</span>
-        <select defaultValue='default' onChange={(e) => setCurrentSort(e.target.value)}>
-            <option value='default'>Ən Yeni</option>
-            <option value='up'>Ucuzdan-Bahaya</option>
-            <option value='down'>Bahadan-Ucuza</option>
-        </select>
-      </div>
+    <div className='sort-container'>
+      <span>Filter:</span>
+      <select value={currentSort} onChange={(e) => handleSorting(e)}>
+        <option value='default'>Ən Yeni</option>
+        <option value='up'>Ucuzdan-Bahaya</option>
+        <option value='down'>Bahadan-Ucuza</option>
+      </select>
+    </div>
   )
 }
 

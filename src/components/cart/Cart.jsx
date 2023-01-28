@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { addProduct, removeProduct, removeQuantity } from '../../redux/cartRedux'
-import { Toaster } from 'react-hot-toast'
 
 const discount = 25;
 const delivery = 3;
@@ -69,12 +68,6 @@ const Cart = () => {
   return (
     <div className='bag'>
       <h1 className='bag-title'>Alış-Veriş Səbətiniz</h1>
-      <Toaster
-        position='bottom-left'
-        toastOptions={{
-          duration: 5000
-        }}
-      />
       {cart.quantity === 0 ? (
         <div className='empty-bag-container'>
           <div className='empty-bag'>

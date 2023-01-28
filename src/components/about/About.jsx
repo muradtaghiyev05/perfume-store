@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <div className='about-container con'>
-      <h1 className='about-title'>Saat Dünyası Haqqında</h1>
+      <h1 className='about-title'>Ətir Dünyası Haqqında</h1>
       <div className='about-detail-container'>
         <p>Ətir Dünyası 2015-ci ildən bəri Azərbaycanda fəaliyyət göstərir və uğurla öz işini davam etdirir. 
           Bu çoxillik fəaliyyətin verdiyi təcrübəyə və bu sektordakı biliyinə əsasən də Ətir Dünyası öz müştərilərinə 

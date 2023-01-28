@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartRedux";
-import { Toaster } from "react-hot-toast";
 
 const ProductCard = ({ item }) => {
 
@@ -24,12 +23,6 @@ const ProductCard = ({ item }) => {
 
   return (
     <motion.div layout className='card'>
-        <Toaster
-          position='bottom-left'
-          toastOptions={{
-            duration: 5000
-          }}
-        />
         <Link to={`/product/${item.id}`} className="product-link Link">
             <div className='img-container'>
                 <LazyLoadImage

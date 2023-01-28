@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Toaster } from "react-hot-toast";
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import ProductCard from '../product-card/ProductCard';
@@ -25,6 +25,7 @@ const sortTypes = {
 
 const Products = () => {
 
+    const { pathname, hash, key } = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
 
     // category variable
@@ -49,13 +50,12 @@ const Products = () => {
         setSearchParams({ ...Object.fromEntries([...searchParams]), page: selected })
     };
 
-    // scroll to top when changing
+
     useEffect(() => {
-        const changePage = () => {
-            window.scrollTo({ top: 0 });
-        };
-        changePage()
-    }, []);
+        if (hash === '') {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname, hash, key]);
 
     useEffect(() => {
         if (searchCategory === 'bütün') {
@@ -71,18 +71,18 @@ const Products = () => {
 
     return (
     <div className='products-page'>
+        <Toaster
+            position='bottom-left'
+            toastOptions={{
+                duration: 5000
+            }}
+        />
         <h1 className='products-page-title' id='products'>Keyfiyyətli Ətirlərimiz</h1>
         <SearchFilter searchText={searchText} searchParams={searchParams} setSearchParams={setSearchParams} />
         <SortFilter currentSort={currentSort} searchParams={searchParams} setSearchParams={setSearchParams} />
         <CategoryFilter searchCategory={searchCategory} searchParams={searchParams} setSearchParams={setSearchParams} />
         {searchResults.length ? (
             <motion.div layout className='products-container'>
-                <Toaster
-                    position='bottom-left'
-                    toastOptions={{
-                        duration: 5000
-                    }}
-                />
                 {searchResults
                     .sort(sortTypes[currentSort].fn)
                     .slice(pagesVisited, pagesVisited + productsPerPage)

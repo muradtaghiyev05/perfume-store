@@ -5,6 +5,7 @@ import CloseIcon from '../../../assets/other-images/close-icon.svg'
 import Logo from '../../../assets/other-images/logo.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import { Toaster } from 'react-hot-toast';
 
 const Header = () => {
 
@@ -16,6 +17,12 @@ const Header = () => {
 
     return (
         <div className='header'>
+            <Toaster
+                position='bottom-left'
+                toastOptions={{
+                    duration: 5000
+                }}
+            />
             <div className='header-container con'>
                 <Link to='/' className='Link' onClick={closeMobileMenu}>
                     <div className='logo-container'>

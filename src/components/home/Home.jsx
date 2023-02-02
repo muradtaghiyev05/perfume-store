@@ -25,6 +25,7 @@ const Home = () => {
                     Ətir Dünyasında hər zövqə uyğun qalıcı ətirlər tapa bilərsiniz. Bizi seçin və
                     sevdiklərinizi gözəl qoxu ilə qarşılayın.
                 </p>
+                <Link to={`/products`}><button className="hero-btn">Bütün Ətirlər</button></Link>
             </div>
         </div>
         <div className="new-arrival-container con">
@@ -33,7 +34,7 @@ const Home = () => {
         <div className="new-products-container">
             <h1>Yeni Gələn Ətirlər</h1>
             <NewProducts />
-            <Link to='/products' className="all-link Link">Bütün Məhsullar</Link>
+            <Link to='/products' className="all-link Link">Bütün Ətirlər</Link>
         </div>
     </div>
     )

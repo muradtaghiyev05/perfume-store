@@ -62,7 +62,7 @@ const Cart = () => {
     });
     productsText += ` sifariş etmək istəyirəm.%0AToplam Məbləğ: ${total - discount} AZN%0AÇatdırılma: ${delivery} AZN`;
     
-    window.open(`https://wa.me/994553600600?text=${productsText}`);
+    window.open(`https://wa.me/994552092104?text=${productsText}`);
   };
   
   return (
